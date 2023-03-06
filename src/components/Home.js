@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../resources/home.css';
-import 'animate.css';
 import CountUp from 'react-countup';
+import logo from '../resources/logo/FRTrockenbau.png';
 import VisibilitySensor from "react-visibility-sensor";
 import Navbar from './Navbar';
 import ScrollToTopButton from './ScrollToTopButton';
@@ -48,13 +48,14 @@ function Home() {
           </div>
         </div>
 
+
         {/* Section */}
 
         <div className='section d-flex flex-column w-100 justify-content-center text-center' >
 
           {/* About us */}
           <div className='section-card d-flex flex-column p-0 m-0'>
-            <h2>Drywall Minhen</h2><br /><br />
+            <h2 style={{ color: "#645124" }}>Drywall Minhen</h2><br /><br />
             <b><p style={{ fontSize: "18px" }} >Vaš stručnjak za sve radove na suhoj gradnji u Münchenu i okolici</p></b><br /><br /><br />
 
             <p>
@@ -66,26 +67,12 @@ function Home() {
 
           </div>
 
-          {/* Counter */}
+          {/* Fixed-background */}
 
-          <div className='animate__fadeIn counter w-100 d-flex gap-3 p-4 justify-content-center'>
-            <div className='empty w-80 p-0 m-0'>
-              {/* Empty space */}
-
+          <div className='div-fixed d-flex w-100 p-0' >
+            <div className='fixed-background w-100 m-0 p-0' >
+              {/* CSS BACKGROUND */}
             </div>
-            <VisibilitySensor onChange={onVisibilityChange}>
-              <div className='counter-global d-flex flex-column w-100 justify-content-center p-0 m-0'>
-                {isVisible ? (
-                  <div className='counter w-100 justify-content-center gap-3 d-flex flex-row p-0 m-0' >
-                    <div className='d-flex  flex-column align-items-center m-4' ><div className='d-flex flex-row'><CountUp style={{marginLeft: "10%"}} start={0} end={10} duration={4} delay={0} />+</div><p style={{fontSize: "16px"}} >Godine iskustva</p></div>
-                    <div className='d-flex flex-column align-items-center  m-4' ><div className='d-flex flex-row'><CountUp style={{marginLeft: "10%"}} start={30} end={104} duration={4} delay={0} />+</div><p style={{fontSize: "16px"}}>Uspješni projekti</p></div>
-                    <div className='d-flex flex-column align-items-center  m-4' ><div className='d-flex flex-row'><CountUp style={{marginLeft: "10%"}} start={0} end={2} duration={4} delay={0} /></div><p style={{fontSize: "16px"}}>Administrativno osoblje</p></div>
-                  </div>
-                ) : (
-                  <span style={{ color: "white" }} >.</span>
-                )}
-              </div>
-            </VisibilitySensor>
           </div>
 
           {/* Services */}
@@ -95,13 +82,13 @@ function Home() {
             <div className="services">
               <div className="container">
                 <div className="heading">
-                  <h1>Services</h1>
+                  <h1 style={{ color: "#645124" }}>Services</h1>
                 </div>
                 <div className="content">
                   <div className="box">
                     <div className="inner">
                       <div className="icon"><i className="fa fa-laptop"></i></div>
-                      <h3>Web Development</h3>
+                      <h3>Trockenbau arbeiten</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
                     </div>
                   </div>
@@ -162,51 +149,86 @@ function Home() {
 
         </div>
 
+        {/* Counter */}
+
+        <div className='animate__fadeIn counter w-100 d-flex gap-3 p-4 justify-content-center'>
+          <div className='empty w-80 p-0 m-0'>
+            {/* Empty space */}
+
+          </div>
+          <VisibilitySensor onChange={onVisibilityChange}>
+            <div className='counter-global d-flex flex-column w-100 justify-content-center p-0 m-0'>
+              {isVisible ? (
+                <div className='counter w-100 justify-content-center gap-3 d-flex flex-row p-0 m-0' >
+                  <div className='d-flex  flex-column align-items-center m-4' ><div className='d-flex flex-row'><CountUp style={{ marginLeft: "10%" }} start={0} end={10} duration={4} delay={0} />+</div><p style={{ fontSize: "16px" }} >Godine iskustva</p></div>
+                  <div className='d-flex flex-column align-items-center  m-4' ><div className='d-flex flex-row'><CountUp style={{ marginLeft: "10%" }} start={30} end={104} duration={4} delay={0} />+</div><p style={{ fontSize: "16px" }}>Uspješni projekti</p></div>
+                  <div className='d-flex flex-column align-items-center  m-4' ><div className='d-flex flex-row'><CountUp style={{ marginLeft: "10%" }} start={0} end={2} duration={4} delay={0} /></div><p style={{ fontSize: "16px" }}>Administrativno osoblje</p></div>
+                </div>
+              ) : (
+                <span style={{ color: "white" }} >.</span>
+              )}
+            </div>
+          </VisibilitySensor>
+        </div>
 
         {/* Footer */}
 
-        <footer className="footer-distributed">
+        <footer className="footer-distributed ">
 
           <div className="footer-left">
 
-            <h3>Company<span>logo</span></h3>
+            <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
             <p className="footer-links">
+
               <a href="#">Home</a>
-              ·
-              <a href="#">Blog</a>
-              ·
-              <a href="#">Pricing</a>
-              ·
-              <a href="#">About</a>
-              ·
-              <a href="#">Faq</a>
-              ·
-              <a href="#">Contact</a>
+
+              <a href="#">About us</a>
+
+              <a href="#">Services</a>
+
+              <a href="#">Galery</a>
+
+              <a href="#">Otisak</a>
             </p>
 
-            <p className="footer-company-name">FR Trockenbau © 2017</p>
+            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved</p>
+          </div>
 
-            <div className="footer-icons">
+          <div className="footer-center">
 
-              <a href="#"><i className="ri-facebook-line"></i></a>
-              <a href="#"><i className="ri-instagram-line"></i></a>
-              <a href="#"><i className="ri-whatsapp-line"></i></a>
+            <div>
+              <i className="ri-map-pin-line"></i>
+              <p><span>Fromund-str.35</span> 81547 München, Germany</p>
+            </div>
+
+            <div>
+              <i className="ri-phone-line"></i>
+              <p>+49 (0) 176 644 1511 0</p>
+            </div>
+
+            <div>
+              <i className="ri-mail-line"></i>
+              <p><a href="mailto:info@fr-trockenbau.de">info@fr-trockenbau.de</a></p>
             </div>
 
           </div>
 
           <div className="footer-right">
 
-            <p>Contact Us</p>
+            <p className="footer-company-about">
+              <span>About the company</span>
+              Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
 
-            <form action="#" method="post">
+            <div className="footer-icons">
 
-              <input type="text" name="email" placeholder="Email" />
-              <textarea name="message" placeholder="Message"></textarea>
-              <button>Send</button>
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-github"></i></a>
 
-            </form>
+            </div>
 
           </div>
 

@@ -27,6 +27,7 @@ const ScrollToTopButton = () => {
   }
 
   const styles = {
+    width: '50px',
     position: 'fixed',
     bottom: '20px',
     right: '20px',

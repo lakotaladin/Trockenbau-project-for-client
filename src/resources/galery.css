@@ -1,0 +1,11 @@
+.global-contact {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+.galery-div {
+    margin: auto !important;
+    width: 60%;
+}
+

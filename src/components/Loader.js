@@ -1,10 +1,10 @@
 import React from 'react'
-import ClockLoader from "react-spinners/ClockLoader";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 
 function Loader() {
    return (
       <div className='spinner'>
-         <ClockLoader
+         <ClimbingBoxLoader
             color="#ffffff"
             size={100}
          />

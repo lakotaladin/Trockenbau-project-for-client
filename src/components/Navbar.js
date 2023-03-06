@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../resources/nav.css";
-import logo from '../resources/logo/logo.png';
+import logo from '../resources/logo/FRTrockenbau.png';
+import { Link } from "react-router-dom";
 
 function Navbar() {
     const navRef = useRef();
@@ -17,12 +18,13 @@ function Navbar() {
     return (
         <>
             <header>
-                <img style={{width: "140px", paddingTop: "18px", marginLeft: "20px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" />
+                <img style={{width: "170px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" />
                 <nav ref={navRef}>
-                    <a href="/#" >Home</a>
-                    <a href="/#"  >My work</a>
-                    <a href="/#"  >Blog</a>
-                    <a href="/#"  >About me</a>
+                    <Link to="/" >Home</Link>
+                    <Link to="/services"  >Services</Link>
+                    <Link to="/galery">Galery</Link>
+                    <Link to="/contact"  >Contact</Link>
+                    <Link to="/otisak"  >Otisak</Link>
                     <button
                         className="nav-btn nav-close-btn"
                         onClick={showNavbar}>
