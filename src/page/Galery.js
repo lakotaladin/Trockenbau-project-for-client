@@ -233,7 +233,7 @@ function Galery() {
 
             <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved</p>
+            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
           </div>
 
           <div className="footer-center">

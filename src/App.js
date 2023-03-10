@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Galery from './page/Galery';
 import Contact from './page/Contact';
 import Impresum from './page/Impresum';
+import Privacy from './page/Privacy';
 
 function App() {
 
@@ -32,6 +33,10 @@ function App() {
 
           <Route path="/contact" element={
             <Contact />
+          } />
+
+          <Route path="/privacy" element={
+            <Privacy />
           } />
 
           <Route path="/impresum" element={

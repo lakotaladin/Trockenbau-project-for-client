@@ -70,9 +70,9 @@ function Contact() {
       <div className="d-flex justify-content-center align-items-center p-0" style={{ height: "100%", margin: "3%" }}>
         <div style={{ width: "90%" }}>
           <h3 style={{ color: "#645124", fontWeight: "bold", marginBottom: "1%", marginTop: "1%" }} >Kontaktieren Sie uns</h3>
-          <b>Wir freuen uns auf Ihre Nachricht!</b><br/>
+          <b>Wir freuen uns auf Ihre Nachricht!</b><br />
           <div className='w-50 d-flex justify-content-center m-1'>
-          <p className='p-2 w-100'>Sie können uns anrufen, uns eine mail senden oder hier das Kontaktformular ausfüllen, das Team freut sich auf Ihre Nachricht.</p>
+            <p className='p-2 w-100'>Sie können uns anrufen, uns eine mail senden oder hier das Kontaktformular ausfüllen, das Team freut sich auf Ihre Nachricht.</p>
           </div>
           <Row gutter={[16, 16]} className="flex-column p-3 flex-md-row">
             <Col xs={{ span: 24 }} md={{ span: 12 }}>
@@ -94,25 +94,25 @@ function Contact() {
         </div>
       </div>
       <div className='d-flex justify-content-center' style={{ width: '100%', height: "600px" }}>
-          <LeafletMap center={[latitude, longitude]} zoom={23} style={{ width: '100%', height: 'auto', margin: "3%" }}>
-                        <TileLayer
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        />
-                        <Marker
-                            cancelable={true}
-                            draggable={false}
-                            position={[latitude, longitude]}>
-                            <Popup>
-                                Državni univerzitet u Novom Pazaru
-                                <br />
-                                Latitude: {latitude}
-                                <br />
-                                Longitude: {longitude}
-                            </Popup>
-                        </Marker>
-                    </LeafletMap>
-        </div>
+        <LeafletMap center={[latitude, longitude]} zoom={23} style={{ width: '100%', height: 'auto', margin: "3%" }}>
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker
+            cancelable={true}
+            draggable={false}
+            position={[latitude, longitude]}>
+            <Popup>
+              Državni univerzitet u Novom Pazaru
+              <br />
+              Latitude: {latitude}
+              <br />
+              Longitude: {longitude}
+            </Popup>
+          </Marker>
+        </LeafletMap>
+      </div>
 
       {/* Footer */}
 
@@ -122,7 +122,7 @@ function Contact() {
 
           <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-          <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved</p>
+          <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
         </div>
 
         <div className="footer-center">

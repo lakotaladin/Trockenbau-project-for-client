@@ -11,11 +11,11 @@ const ContactForm = () => {
     const [email, setEmail] = useState('')
     const [msg, setMsg] = useState('')
 
-   
+
 
     const sendEmail = () => {
 
-        // const f formirano kako bi moglo da radi slanje mejla preko ant design forme
+       
         const f = document.getElementById("mail-form")
 
         // Email config
@@ -28,7 +28,7 @@ const ContactForm = () => {
                 console.log(error)
             });
     }
-    
+
 
     return (
         <Form id="mail-form" ref={form} onFinish={sendEmail} layout="vertical">
@@ -81,7 +81,7 @@ const ContactForm = () => {
                     disabled={username === "" || lastname === "" || email === "" || msg === ""}
                 />
             </Form.Item>
-          
+
         </Form>
         // </div>
     );

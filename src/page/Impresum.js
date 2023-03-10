@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
-import '../resources/galery.css'
 import logo from '../resources/logo/FRTrockenbau.png';
 import { FaBars, FaTimes } from "react-icons/fa";
 import "../resources/nav.css";
+import "../resources/impresum.css";
 import { Link } from "react-router-dom";
 import ScrollToTopButton from '../components/ScrollToTopButton';
 
@@ -60,7 +60,32 @@ function Impresum() {
           </div>
           {/* Impressum  */}
 
-
+          <div className='impressum-div d-flex flex-column p-4'>
+            <h2>Angaben gemäß § 5 TMG:</h2>
+            <p>FR Trockenbau<br />Faruk Rizovic</p>
+            <h3>Postanschrift:</h3>
+            <p>Fromund-str.35<br />81547 München<br /></p>
+            <h3>Kontakt:</h3>
+            <p>Telefon: +49 (0) 176 644 1511 0<br />E-Mail: info@fr-trockenbau.de</p>
+            <p></p><h3>Vertreten durch:</h3>
+            <p>Faruk Rizovic<br /></p>
+            <p></p><h3>Umsatzsteuer-Identifikationsnummer</h3>
+            <p>146/168/41913<br /></p>
+            <p><br /></p>
+            <h3>Aufsichtsbehörde</h3>
+            <p>Faruk Rizovic<br /></p>
+            <p></p><h3>Zugelassen für:</h3>
+            <p>Deutschland<br /></p>
+            <p></p><h2>Hinweise zur Website</h2>
+            <p></p><h3>Urheberrechtliche Hinweise</h3>
+            <p>Faruk Rizovic<br /></p>
+            <p></p><h3>Verantwortlich für journalistisch-redaktionelle Inhalte ist:</h3>
+            <p>Faruk Rizovic<br /></p>
+            <p></p><h2>Information gemäß § 36 VSBG</h2>
+            <p>Gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz – Gesetz über die alternative Streitbeilegung in Verbrauchersachen) erklärt der Betreiber dieser Website:</p>
+            <p>Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+            <p></p><p><em>Das Impressum wurde mit dem <a href="https://www.activemind.de/datenschutz/impressums-generator/">Impressums-Generator der activeMind AG</a> erstellt.</em></p>
+          </div>
 
 
         </div>
@@ -73,7 +98,7 @@ function Impresum() {
 
             <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved</p>
+            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
           </div>
 
           <div className="footer-center">
