@@ -1,4 +1,3 @@
-
 /* Banner */
 
 .banner {
@@ -7,16 +6,35 @@
     background-image: url('../resources/images/banner.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-color: aqua;
     align-items: center;
     text-align: start;
+}
+
+@media (max-width: 1023px) {
+    .banner {
+        background-image: url('../resources/images/banner2.png');
+        background-size: 100% 100%;
+        text-align: center;
+    }
+
+    .banner-card {
+        width: 70%;
+        margin: auto !important;
+        border-radius: 0px !important;
+        border: 2px solid black !important;
+        padding: 3% !important;
+    }
 }
 
 .banner-card {
     text-align: center;
     align-items: center;
+    color: black;
+    border-radius: 50px;
     padding: 2%;
-    background: transparent;
+    border: 2px solid #980100;
+    margin-left: 30px;
+    background: white;
     justify-content: center;
 }
 
@@ -25,26 +43,40 @@
     color: white;
     height: 40px;
     font-weight: bolder;
-    background-color: #645124;
+    background-color: #980100;
     text-align: center;
 }
+
+.button-contact:hover {
+    width: 150px;
+    color: white;
+    height: 40px;
+    font-weight: bolder;
+    background-color: #980100;
+    text-align: center;
+}
+
 /* ------------------------------------------------ */
 
 /* Section */
 .section {
-    margin-top: 4%;
+    margin: 10% 0%;
     justify-content: center;
     align-items: center;
 }
 
 .section p {
     color: grey;
+    font-size: 18px;
+    width: 90%;
+    justify-content: start;
+    align-items: center;
 }
 
 .section-card {
     width: 70%;
     padding: 3%;
-    margin: 2%;
+    margin: 7% 0%;
     justify-content: center;
     align-items: center;
     height: auto;
@@ -55,15 +87,38 @@
 /* Counter */
 
 .counter-global {
-    font-size: 60px;
+    font-size: 18px;
+    text-align: center;
     height: 400px;
     align-items: center;
     color: #645124;
     font-weight: bold;
 }
 
-.empty {
-    height: 100px;
+.count-font {
+    font-size: 60px !important;
+}
+
+.counter {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden !important;
+    font-size: 16px;
+}
+
+@media (max-width: 1023px) {
+    .counter-global {
+        font-size: 12px;
+        text-align: center;
+        height: 400px;
+        align-items: center;
+        color: #645124;
+        font-weight: bold;
+    }
+    
+    .count-font {
+        font-size: 40px !important;
+    }
 }
 
 /* --------------------------------------------------- */
@@ -71,7 +126,7 @@
 /* Fixed background */
 
 .div-fixed {
-    margin-top: 5%;
+    margin: 10% 0% 0% 0%;
 }
 
 
@@ -90,107 +145,114 @@
 
 /* Services */
 
-.services{
-	background-color: #eeeeee;
-	min-height: 100vh;
-    margin: 6% 0%;
-	width: 100%;
-	float: left;
-	padding:100px 0;
+.services {
+    margin-top: 7% !important;
+    background-color: white;
+    min-height: 100vh;
+    margin: 1% 0%;
+    width: 100%;
+    float: left;
 }
 
-.container{
-	max-width: 1170px;
-	margin: auto;
-}
-.services .heading{
-	margin-bottom: 60px;
-	width: 100%;
-	float: left;
-}
-.services .heading h1{
-  text-align: center;
-  font-size: 40px;
-  color:#000000;
-  margin:0;
+.container {
+    max-width: 1170px;
+    margin: auto;
 }
 
-.services .content{
-	float: left;
-	width: 100%;
-}
-.services .content .box{
-	width: 33.33%;
-	float: left;
-	padding:15px;
-}
-.services .content .box .inner{
-	padding:30px;
-	text-align: center;
-	position: relative;
+.services .heading {
+    margin-bottom: 60px;
+    width: 100%;
+    float: left;
 }
 
-.services .content .box .inner::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom:0;
-	width:0;
-	box-sizing: border-box;
-	height: 0;
-	border-bottom:3px solid transparent;
-	border-left: 3px solid transparent;
-	transition: all .8s ease;
+.services .heading h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #000000;
+    margin: 0;
 }
-.services .content .box .inner::after{
-	content: '';
-	position: absolute;
-	right:0;
-	top:0;
-	width:0;
-	box-sizing: border-box;
-	height:0;
-	border-top:3px solid transparent;
-	border-right: 3px solid transparent;
-	transition: all .8s ease;
+
+.services .content {
+    float: left;
+    width: 100%;
 }
+
+.services .content .box {
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+}
+
+.services .content .box .inner {
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.services .content .box .inner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    box-sizing: border-box;
+    height: 0;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    transition: all .8s ease;
+}
+
+.services .content .box .inner::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    box-sizing: border-box;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    transition: all .8s ease;
+}
+
 .services .content .box:hover .inner::after,
-.services .content .box:hover .inner::before{
-   border-color: #645124;
-   width: 100%;
-   height: 100%;
-}
-.services .content .box .inner .icon{
-	font-size:50px;
-	color:#000;
-	transition: color .8s ease;
-}
-.services .content .box:hover .inner .icon{
-	color:#645124;
-}
-.services .content .box .inner h3{
-	font-size: 20px;
-	font-weight: normal;
-	color:#000;
-	margin:20px 0;
+.services .content .box:hover .inner::before {
+    border-color: #645124;
+    width: 100%;
+    height: 100%;
 }
 
-.services .content .box .inner p{
-	font-size:15px;
-	color:#444444;
-	line-height:24px;
+.services .content .box .inner .icon {
+    font-size: 50px;
+    color: #000;
+    transition: color .8s ease;
+}
+
+.services .content .box:hover .inner .icon {
+    color: #645124;
+}
+
+.services .content .box .inner h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: #000;
+    margin: 20px 0;
+}
+
+.services .content .box .inner p {
+    font-size: 15px;
+    color: #444444;
+    line-height: 24px;
 }
 
 
 /*responsive*/
 
-@media(max-width: 767px){
-	.services .content .box {
-    width:100%;
-    
-}
+@media(max-width: 767px) {
+    .services .content .box {
+        width: 100%;
+
+    }
 }
 
 /* ---------------------------------------------------------- */
-
-

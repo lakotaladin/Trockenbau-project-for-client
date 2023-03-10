@@ -1,14 +1,37 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React, { useRef, useState } from 'react';
+import { FaBars, FaTimes } from "react-icons/fa";
+import { MapContainer as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
+// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import '../resources/contact.css';
 import logo from '../resources/logo/FRTrockenbau.png';
 import scanqr from '../resources/images/scanqr.gif';
 import qrcode from '../resources/images/phone.png';
-import { Row, Col, Input, Button } from "antd";
-import { UserOutlined, MailOutlined, MessageOutlined } from "@ant-design/icons";
+import { Row, Col } from "antd";
+import { Link } from 'react-router-dom';
+import ContactForm from '../components/ContactForm';
 
 
 function Contact() {
+  const [latitude] = useState(48.1115616);
+  const [longitude] = useState(11.6179683);
+  const navRef = useRef();
+
+  const showNavbar = () => {
+    navRef.current.classList.toggle(
+      "responsive_nav"
+    );
+  };
+
+  const L = require("leaflet");
+
+  delete L.Icon.Default.prototype._getIconUrl;
+
+  L.Icon.Default.mergeOptions({
+    iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+    iconUrl: require("leaflet/dist/images/marker-icon.png"),
+    shadowUrl: require("leaflet/dist/images/marker-shadow.png")
+  });
+
   return (
     <>
       {/* Contact bar */}
@@ -22,53 +45,74 @@ function Contact() {
       </div>
 
       {/* Navigation bar */}
-      <Navbar />
+      <header>
+        <img style={{ width: "170px" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
+        <nav ref={navRef}>
+          <Link to="/" >Home</Link>
+          <Link to="/galery">Galerie</Link>
+          <Link to="/contact"  >Kontakt</Link>
+          <Link to="/impresum"  >Impressum</Link>
+          <button
+            className="nav-btn nav-close-btn"
+            onClick={showNavbar}>
+            <FaTimes />
+          </button>
+        </nav>
+        <button
+          className="nav-btn"
+          onClick={showNavbar}>
+          <FaBars />
+        </button>
+      </header>
 
       {/* Contact */}
 
-      <div className="d-flex justify-content-center align-items-center p-0 m-4" style={{ height: "100vh" }}>
-      <div style={{ width: "80%" }}>
-        <h3 style={{color: "#645124", fontWeight: "bold"}} >Contact Us</h3>
-        <Row gutter={[16, 16]} className="flex-column flex-md-row">
-          <Col xs={{ span: 24 }} md={{ span: 12 }}>
-            <div className="p-3">
-              <Row gutter={[16, 16]} className="mb-3">
-                <Col xs={{ span: 24 }} sm={{ span: 12 }}>
-                  <Input placeholder="First name" prefix={<UserOutlined />} size="large" style={{ borderBottom: "2px solid grey" }} />
-                </Col>
-                <Col xs={{ span: 24 }} sm={{ span: 12 }}>
-                  <Input placeholder="Last name" prefix={<UserOutlined />} size="large" style={{ borderBottom: "2px solid grey" }} />
-                </Col>
-              </Row>
-              <Row gutter={[16, 16]}>
-              <Col xs={{ span: 24 }} sm={{ span: 24 }}>
-                  <Input placeholder="Mail" type='mail' prefix={<MailOutlined />} size="large" style={{ borderBottom: "2px solid grey" }} />
-                </Col>
-                <Col span={24}>
-                  <Input.TextArea placeholder="Message" rows={8} prefix={<MessageOutlined />} size="large" style={{ border: "1px solid grey" }} />
-                </Col>
-              </Row>
-              <Row gutter={[16, 16]} className="mt-3">
-                <Col span={24}>
-                  <Button type="primary" size="large" block>SEND</Button>
-                </Col>
-              </Row>
-            </div>
-          </Col>
-          <Col xs={{ span: 24 }} md={{ span: 12 }} className="mt-4 mt-md-0">
-            <div className="p-3 text-center gap-2">
-              <img src={scanqr} alt="scan-qr-code-with-camera" style={{width: "70%", marginBottom: "4%"}} /><br/>
-              <img src={qrcode} alt="QR-CODE"  style={{width: "40%", marginBottom: "4%"}} />
-              <p>Some information about the company contact</p>
-              <p>Address: Some Street 1</p>
-              <p>City: Belgrade</p>
-              <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </Col>
-        </Row>
+      <div className="d-flex justify-content-center align-items-center p-0" style={{ height: "100%", margin: "3%" }}>
+        <div style={{ width: "90%" }}>
+          <h3 style={{ color: "#645124", fontWeight: "bold", marginBottom: "1%", marginTop: "1%" }} >Kontaktieren Sie uns</h3>
+          <b>Wir freuen uns auf Ihre Nachricht!</b><br/>
+          <div className='w-50 d-flex justify-content-center m-1'>
+          <p className='p-2 w-100'>Sie können uns anrufen, uns eine mail senden oder hier das Kontaktformular ausfüllen, das Team freut sich auf Ihre Nachricht.</p>
+          </div>
+          <Row gutter={[16, 16]} className="flex-column p-3 flex-md-row">
+            <Col xs={{ span: 24 }} md={{ span: 12 }}>
+              <ContactForm />
+            </Col>
+            <Col xs={{ span: 24 }} md={{ span: 12 }} className="mt-4 mt-md-0">
+              <div className="p-3 text-center gap-2">
+                <img src={scanqr} alt="scan-qr-code-with-camera" style={{ width: "70%", marginBottom: "4%" }} /><br />
+                <img src={qrcode} title="Phone QR Code" alt="QR-CODE" style={{ width: "40%", marginBottom: "4%" }} />
+                <p><i style={{ fontSize: "18px" }} className="ri-phone-fill"></i>      Scanne den QR-Code für Kontaktdaten auf dem Telefon</p>
+                <b style={{ marginTop: "2%", fontSize: "16px" }}><p>Fragen? Wünsche? Anregungen?</p></b>
+                <p style={{ width: "50%", paddingLeft: "2%", paddingRight: "2%", paddingBottom: "2%", justifyContent: "center", margin: "auto" }}>Wir stehen Ihnen für Ihre Anfrage jederzeit gerne zur Verfügung.
+                  Vereinbaren Sie mit uns einen Besichtigungstermin, wir erstellen Ihnen
+                  für Ihr Projekt gerne ein detailliertes Angebot,
+                  das Sie in Ruhe prüfen können.</p>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </div>
-    </div>
-
+      <div className='d-flex justify-content-center' style={{ width: '100%', height: "600px" }}>
+          <LeafletMap center={[latitude, longitude]} zoom={23} style={{ width: '100%', height: 'auto', margin: "3%" }}>
+                        <TileLayer
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        />
+                        <Marker
+                            cancelable={true}
+                            draggable={false}
+                            position={[latitude, longitude]}>
+                            <Popup>
+                                Državni univerzitet u Novom Pazaru
+                                <br />
+                                Latitude: {latitude}
+                                <br />
+                                Longitude: {longitude}
+                            </Popup>
+                        </Marker>
+                    </LeafletMap>
+        </div>
 
       {/* Footer */}
 
@@ -77,19 +121,6 @@ function Contact() {
         <div className="footer-left">
 
           <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
-
-          <p className="footer-links">
-
-            <a href="#">Home</a>
-
-            <a href="#">About us</a>
-
-            <a href="#">Services</a>
-
-            <a href="#">Galery</a>
-
-            <a href="#">Otisak</a>
-          </p>
 
           <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved</p>
         </div>
@@ -108,7 +139,7 @@ function Contact() {
 
           <div>
             <i className="ri-mail-line"></i>
-            <p><a href="mailto:info@fr-trockenbau.de">info@fr-trockenbau.de</a></p>
+            <p><a style={{ color: "black", textDecoration: "underline" }} href="mailto:info@fr-trockenbau.de">info@fr-trockenbau.de</a></p>
           </div>
 
         </div>
@@ -116,18 +147,9 @@ function Contact() {
         <div className="footer-right">
 
           <p className="footer-company-about">
-            <span>About the company</span>
-            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            <span>Über uns</span>
+            Ihr Experte für Trockenbauarbeiten in München und Umgebung. Profitieren Sie von mehr als 6 Jahren professioneller Erfahrung bei FR Trockenbau in München. Selbstverständlich unterbreiten wir Ihnen gerne ein faires Angebot. Mit einem absoluten Bewusstsein für Qualität und höchster Kompetenz führt unser Team von Faruk Rizovic Trockenbau in München und Umgebung Bestellungen auf eine hochwertige und saubere Weise aus. FR Trockenbau - Ihr zuverlässiger Partner in München.
           </p>
-
-          <div className="footer-icons">
-
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-
-          </div>
 
         </div>
 

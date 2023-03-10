@@ -1,4 +1,9 @@
 /* All elements */
+html {
+	width: 100%;
+	overflow-x: hidden !important;
+	scroll-behavior: smooth !important;
+  }
 
 * {
     padding: 0%;
@@ -42,9 +47,17 @@
     align-items: center;
     justify-content: center;
     color: white;
-    background-color: #666;
+	/* position: fixed; */
+    background-color: black;
     z-index: 10;
 }
+
+@media (max-width: 1023px) {
+	.contact-bar {
+	  display: none !important;
+	}
+  }
+
 /* ---------------------------------------------------------------------------- */
 
 
@@ -53,9 +66,12 @@
 /* Footer */
 
 .footer-distributed{
-	background: #666;
+	background: white !important;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
+	border-top: 4px solid #645124;
+	border-radius: 5%;
+	margin-top: 5%;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
@@ -75,22 +91,10 @@
 	width: 40%;
 }
 
-/* The company logo */
-
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Open Sans', cursive;
-	margin: 0;
-}
-
-.footer-distributed h3 span{
-	color:  lightseagreen;
-}
-
 /* Footer links */
 
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  black !important;
 	margin: 20px 0 12px;
 	padding: 0;
 }
@@ -104,7 +108,6 @@
 }
 
 .footer-distributed .footer-company-name{
-	color:  #222;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -117,7 +120,7 @@
 }
 
 .footer-distributed .footer-center i{
-	color: #ffffff;
+	color: black !important;
 	font-size: 25px;
 	width: 38px;
     font-weight: normal;
@@ -136,7 +139,7 @@
 
 .footer-distributed .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+	color: black !important;
   font-weight:400;
 	vertical-align: middle;
 	margin:0;
@@ -150,19 +153,10 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  lightseagreen;
 	text-decoration: none;;
 }
 
-.footer-distributed .footer-links a:before {
-  content: "|";
-  font-weight:300;
-  font-size: 20px;
-  left: 0;
-  color: #fff;
-  display: inline-block;
-  padding-right: 5px;
-}
+
 
 .footer-distributed .footer-links .link-1:before {
   content: none;
@@ -176,7 +170,7 @@
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  black;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -184,7 +178,7 @@
 
 .footer-distributed .footer-company-about span{
 	display: block;
-	color:  #ffffff;
+	color:  black;
 	font-size: 14px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -192,6 +186,7 @@
 
 .footer-distributed .footer-icons{
 	margin-top: 25px;
+	font-weight: lighter;
 }
 
 .footer-distributed .footer-icons a{
@@ -199,14 +194,14 @@
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  #645124;
 	border-radius: 2px;
 
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
 	line-height: 35px;
-
+	font-weight: lighter;
 	margin-right: 3px;
 	margin-bottom: 5px;
 }

@@ -17,14 +17,15 @@ function Navbar() {
 
     return (
         <>
+        
             <header>
                 <img style={{width: "170px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" />
                 <nav ref={navRef}>
                     <Link to="/" >Home</Link>
-                    <Link to="/services"  >Services</Link>
-                    <Link to="/galery">Galery</Link>
-                    <Link to="/contact"  >Contact</Link>
-                    <Link to="/otisak"  >Otisak</Link>
+                    <a  href="#services">Leistungen</a>
+                    <Link to="/galery">Galerie</Link>
+                    <Link to="/contact"  >Kontakt</Link>
+                    <Link to="/impresum"  >Impressum</Link>
                     <button
                         className="nav-btn nav-close-btn"
                         onClick={showNavbar}>
