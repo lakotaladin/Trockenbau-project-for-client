@@ -1,12 +1,13 @@
-import React from 'react'
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import React from 'react';
+import FadeLoader from "react-spinners/FadeLoader";
+import '../resources/global.css';
 
 function Loader() {
    return (
       <div className='spinner'>
-         <ClimbingBoxLoader
+         <FadeLoader
             color="#ffffff"
-            size={100}
+            size={400}
          />
       </div>
 

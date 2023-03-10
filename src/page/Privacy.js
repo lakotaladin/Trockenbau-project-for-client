@@ -66,7 +66,7 @@ function Privacy() {
                         <p>Faruk Rizovic</p>
                         <p>Fromund-str.35</p>
                         <p>81547 München</p>
-                        <p>Phone: +49 (0) 176 644 1511 0</p>
+                        <p>Telefon: +49 (0) 176 644 1511 0</p>
                         <a href="mailto:info@fr-trockenbau.de">info@fr-trockenbau.de</a>
                         <h2>Ihre Betroffenenrechte</h2>
                         <p>Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:</p>

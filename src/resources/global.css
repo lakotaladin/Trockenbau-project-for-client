@@ -25,7 +25,8 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #645124;
+    background-color: black !important;
+	overflow: hidden !important;
 }
 /* ----------------------------------------------------------------------------- */
 

@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c70fc73.css",
+    "main.js": "/static/js/main.7b72a180.js",
+    "static/js/787.473673f7.chunk.js": "/static/js/787.473673f7.chunk.js",
+    "static/media/banner.png": "/static/media/banner.c1b880f424b1ddac41a7.png",
+    "static/media/banner2.png": "/static/media/banner2.128978d72eb884b260d8.png",
+    "static/media/scanqr.gif": "/static/media/scanqr.fe71b87aa0aef69e12c1.gif",
+    "static/media/img3.jpeg": "/static/media/img3.aba90cdd3af45238cbae.jpeg",
+    "static/media/img1.jpeg": "/static/media/img1.63a1c93e10bce3ae15d8.jpeg",
+    "static/media/image4.jpg": "/static/media/image4.b9a0532b3f7ae59fafd7.jpg",
+    "static/media/img10.jpeg": "/static/media/img10.0804f3956f2dc9a5d22d.jpeg",
+    "static/media/img2.jpeg": "/static/media/img2.31a30cca7718d9e489f7.jpeg",
+    "static/media/img12.jpeg": "/static/media/img12.4d233199bc8ea07be8de.jpeg",
+    "static/media/img4.jpeg": "/static/media/img4.f4472d84ad48690b8384.jpeg",
+    "static/media/img5.jpeg": "/static/media/img5.aeeaddbfb8ba622f29d6.jpeg",
+    "static/media/img7.jpeg": "/static/media/img7.6fce172038abe58266a7.jpeg",
+    "static/media/img9.jpeg": "/static/media/img9.de5d4e004641da092c3e.jpeg",
+    "static/media/img6.jpeg": "/static/media/img6.09b3f01726a9d1cb08c7.jpeg",
+    "static/media/img8.jpeg": "/static/media/img8.842508666bfd2328e67d.jpeg",
+    "static/media/FRTrockenbau.png": "/static/media/FRTrockenbau.103d9f27df67af82cb42.png",
+    "static/media/img11.jpeg": "/static/media/img11.4d83444c10298cb9fca2.jpeg",
+    "static/media/icon5.png": "/static/media/icon5.9eee1cb13457c14ab000.png",
+    "index.html": "/index.html",
+    "main.1c70fc73.css.map": "/static/css/main.1c70fc73.css.map",
+    "main.7b72a180.js.map": "/static/js/main.7b72a180.js.map",
+    "787.473673f7.chunk.js.map": "/static/js/787.473673f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c70fc73.css",
+    "static/js/main.7b72a180.js"
+  ]
+}
