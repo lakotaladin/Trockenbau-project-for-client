@@ -6,7 +6,7 @@ function Loader() {
    return (
       <div className='spinner'>
          <FadeLoader
-            color="#ffffff"
+            color="#645124"
             size={400}
          />
       </div>

@@ -25,7 +25,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black !important;
+    background-color: white !important;
 	overflow: hidden !important;
 }
 /* ----------------------------------------------------------------------------- */
@@ -60,8 +60,6 @@ html {
   }
 
 /* ---------------------------------------------------------------------------- */
-
-
 
 
 /* Footer */

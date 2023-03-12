@@ -71,7 +71,7 @@ function Contact() {
         <div style={{ width: "90%" }}>
           <h3 style={{ color: "#645124", fontWeight: "bold", marginBottom: "1%", marginTop: "1%" }} >Kontaktieren Sie uns</h3>
           <b>Wir freuen uns auf Ihre Nachricht!</b><br />
-          <div className='w-50 d-flex justify-content-center m-1'>
+          <div className='w-100 d-flex justify-content-center m-1'>
             <p className='p-2 w-100'>Sie können uns anrufen, uns eine mail senden oder hier das Kontaktformular ausfüllen, das Team freut sich auf Ihre Nachricht.</p>
           </div>
           <Row gutter={[16, 16]} className="flex-column p-3 flex-md-row">
@@ -79,12 +79,12 @@ function Contact() {
               <ContactForm />
             </Col>
             <Col xs={{ span: 24 }} md={{ span: 12 }} className="mt-4 mt-md-0">
-              <div className="p-3 text-center gap-2">
-                <img src={scanqr} alt="scan-qr-code-with-camera" style={{ width: "70%", marginBottom: "4%" }} /><br />
-                <img src={qrcode} title="Phone QR Code" alt="QR-CODE" style={{ width: "40%", marginBottom: "4%" }} />
+              <div className="info-div p-3 text-center gap-2">
+                <img src={scanqr} alt="scan-qr-code-with-camera" style={{ width: "300px", height: "auto", marginBottom: "4%" }} /><br />
+                <img src={qrcode} title="Phone QR Code" alt="QR-CODE" style={{ width: "230px", marginBottom: "4%" }} />
                 <p><i style={{ fontSize: "18px" }} className="ri-phone-fill"></i>      Scanne den QR-Code für Kontaktdaten auf dem Telefon</p>
-                <b style={{ marginTop: "2%", fontSize: "16px" }}><p>Fragen? Wünsche? Anregungen?</p></b>
-                <p style={{ width: "50%", paddingLeft: "2%", paddingRight: "2%", paddingBottom: "2%", justifyContent: "center", margin: "auto" }}>Wir stehen Ihnen für Ihre Anfrage jederzeit gerne zur Verfügung.
+                <b><p>Fragen? Wünsche? Anregungen?</p></b>
+                <p>Wir stehen Ihnen für Ihre Anfrage jederzeit gerne zur Verfügung.
                   Vereinbaren Sie mit uns einen Besichtigungstermin, wir erstellen Ihnen
                   für Ihr Projekt gerne ein detailliertes Angebot,
                   das Sie in Ruhe prüfen können.</p>

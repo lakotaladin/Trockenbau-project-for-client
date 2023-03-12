@@ -48,8 +48,10 @@ function Home() {
 
         <div className='banner d-flex p-0 m-0'>
           <div className='banner-card d-flex flex-column'>
-            <b><h3>Haben Sie ein Projekt bei dem wir helfen können?</h3></b><br /><br />
-            <p>Profitieren Sie von über 6 Jahren Berufserfahrung der Firma FR Trockenbau aus München.</p>
+            <b><h3 className='p-0 m-2'>Haben Sie ein Projekt bei dem wir helfen können?</h3></b><br /><br />
+            <div className='d-flex justify-content-center'>
+            <p style={{width: "70%"}}>Profitieren Sie von über 6 Jahren Berufserfahrung der Firma FR Trockenbau aus München.</p>
+            </div>
             <br />
             <br />
             <br />
@@ -68,10 +70,10 @@ function Home() {
             <b><p style={{ fontSize: "16px", margin: "auto" }} >Ihr Spezialist für alle Trockenbauarbeiten in und um München</p></b><br /><br /><br />
 
             <p>
-              Herzlich willkommen auf der Webseite der FR Trockenbau aus München - Ihre zuverlässigen Meister für Trockenbau in München und Umgebung. Über 6 Jahre Erfahrung im Trockenbau und zahlreiche zufriedene Kunden sprechen für uns! Unser Motto: "Alles aus einer Hand" - Unsere umfassenden Dienstleistungen umfassen die Inneneinrichtung Ihrer Immobilie nach dem "schlüsselfertigen" Prinzip sowie die rechtzeitige Dachisolierung oder die Umsetzung vorgeschriebener Brandschutzmaßnahmen in München. Die FR Trockenbau in München setzt sich für faire Preise sowie für eine schnelle, saubere und termingerechte Ausführung aller Arbeiten ein.
+              Herzlich willkommen auf der Webseite der FR Trockenbau aus München - Ihre zuverlässigen Meister für Trockenbau in München und Umgebung. <br/>Über 6 Jahre Erfahrung im Trockenbau und zahlreiche zufriedene Kunden sprechen für uns! Unser Motto: "Alles aus einer Hand" - Unsere umfassenden Dienstleistungen umfassen die Inneneinrichtung Ihrer Immobilie nach dem "schlüsselfertigen" Prinzip sowie die rechtzeitige Dachisolierung oder die Umsetzung vorgeschriebener Brandschutzmaßnahmen in München.<br/> Die FR Trockenbau in München setzt sich für faire Preise sowie für eine schnelle, saubere und termingerechte Ausführung aller Arbeiten ein.
             </p><br />
             <p>
-              "Die Erfüllung der Wünsche unserer Kunden und ihre Zufriedenheit haben in München oberste Priorität! Wir integrieren Ihre Ideen immer in unsere Beratung und Planung des Trockenbaus - informieren Sie jedoch auch ehrlich aus der Sicht eines erfahrenen Meisters, wenn etwas nicht umsetzbar ist. Wir bieten Ihnen eine faire und transparente Preisstruktur sowie eine professionelle und rechtzeitige Umsetzung in München und Umgebung. Gerne zeigen wir Ihnen, wo Sie sparen können und wo sich Investitionen lohnen. Wir sind Spezialisten für Trockenbau und folgende zusätzliche Bereiche:
+              "Die Erfüllung der Wünsche unserer Kunden und ihre Zufriedenheit haben in München oberste Priorität!<br/><br/> Wir integrieren Ihre Ideen immer in unsere Beratung und Planung des Trockenbaus - informieren Sie jedoch auch ehrlich aus der Sicht eines erfahrenen Meisters, wenn etwas nicht umsetzbar ist. Wir bieten Ihnen eine faire und transparente Preisstruktur sowie eine professionelle und rechtzeitige Umsetzung in München und Umgebung. <br/><br/>Gerne zeigen wir Ihnen, wo Sie sparen können und wo sich Investitionen lohnen. Wir sind Spezialisten für Trockenbau und folgende zusätzliche Bereiche:
             </p>
 
           </div>
@@ -165,9 +167,9 @@ function Home() {
             <div className='counter-global d-flex flex-column justify-content-center p-0 m-0'>
               {isVisible ? (
                 <div className='w-100 justify-content-center gap-3 d-flex flex-row p-0 m-0' >
-                  <div className='d-flex  flex-column align-items-center m-4' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={0} end={10} duration={3} delay={0} />+</div><p>Jahre Erfahrung</p></div>
-                  <div className='d-flex flex-column align-items-center  m-4' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={30} end={104} duration={3} delay={0} />+</div><p>Erfolgreiche Projekte</p></div>
-                  <div className='d-flex flex-column align-items-center  m-4' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={0} end={2} duration={3} delay={0} /></div><p>Administrative Mitarbeiter</p></div>
+                  <div className='d-flex  flex-column align-items-center m-2' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={0} end={10} duration={3} delay={0} />+</div><p>Jahre Erfahrung</p></div>
+                  <div className='d-flex flex-column align-items-center  m-2' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={30} end={104} duration={3} delay={0} />+</div><p>Erfolgreiche Projekte</p></div>
+                  <div className='d-flex flex-column align-items-center  m-2' ><div className='count-font d-flex flex-row'><CountUp className='count-font' start={0} end={2} duration={3} delay={0} /></div><p>Administrative Mitarbeiter</p></div>
                 </div>
               ) : (
                 <span style={{ color: "white" }} >.</span>
@@ -218,6 +220,8 @@ function Home() {
         </footer>
 
       </div>
+  
+      {/* Scroll to top */}
       <ScrollToTopButton />
     </>
   )
