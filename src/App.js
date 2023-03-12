@@ -6,52 +6,42 @@ import Galery from './page/Galery';
 import Contact from './page/Contact';
 import Impresum from './page/Impresum';
 import Privacy from './page/Privacy';
-import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+
 
 function App() {
-
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    window.onload = () => {
-      setIsLoading(false);
-    };
-  }, []);
-
-
+  const { loading } = useSelector(state => state.alerts)
   return (
     <div>
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <BrowserRouter>
+      {loading && <Loader />}
+      <BrowserRouter>
 
-          <Routes>
+        <Routes>
 
-            <Route path="/" element={
-              <Home />
-            } />
+          <Route path="/" element={
+            <Home />
+          } />
 
-            <Route path="/galery" element={
-              <Galery />
-            } />
+          <Route path="/galery" element={
+            <Galery />
+          } />
 
-            <Route path="/contact" element={
-              <Contact />
-            } />
+          <Route path="/contact" element={
+            <Contact />
+          } />
 
-            <Route path="/privacy" element={
-              <Privacy />
-            } />
+          <Route path="/privacy" element={
+            <Privacy />
+          } />
 
-            <Route path="/impresum" element={
-              <Impresum />
-            } />
+          <Route path="/impresum" element={
+            <Impresum />
+          } />
 
 
-          </Routes>
-        </BrowserRouter>
-      )}
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }
