@@ -30,7 +30,7 @@ function Impresum() {
 
         {/* Navigation bar */}
         <header>
-          <img style={{ width: "170px" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
+        <a href="/"><img style={{width: "170px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" /></a>
           <nav ref={navRef}>
             <Link to="/" >Home</Link>
             <Link to="/galery">Galerie</Link>
@@ -98,7 +98,7 @@ function Impresum() {
 
             <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
+            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <a style={{ color: "black" }} href="/privacy">Datenschutz</a> <a style={{ color: "black" }} href="/impresum">Impressum</a></p>
           </div>
 
           <div className="footer-center">

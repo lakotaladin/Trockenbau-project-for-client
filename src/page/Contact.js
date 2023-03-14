@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MapContainer as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
-// import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import '../resources/contact.css';
 import logo from '../resources/logo/FRTrockenbau.png';
 import scanqr from '../resources/images/scanqr.gif';
@@ -46,7 +45,7 @@ function Contact() {
 
       {/* Navigation bar */}
       <header>
-        <img style={{ width: "170px" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
+      <a href="/"><img style={{width: "170px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" /></a>
         <nav ref={navRef}>
           <Link to="/" >Home</Link>
           <Link to="/galery">Galerie</Link>
@@ -80,7 +79,7 @@ function Contact() {
             </Col>
             <Col xs={{ span: 24 }} md={{ span: 12 }} className="mt-4 mt-md-0">
               <div className="info-div p-3 text-center gap-2">
-                <img src={scanqr} alt="scan-qr-code-with-camera" style={{ width: "300px", height: "auto", marginBottom: "4%" }} /><br />
+                <img src={scanqr} alt="scan-qr-code-with-camera" style={{ width: "150px", height: "auto", marginBottom: "4%" }} /><br />
                 <img src={qrcode} title="Phone QR Code" alt="QR-CODE" style={{ width: "230px", marginBottom: "4%" }} />
                 <p><i style={{ fontSize: "18px" }} className="ri-phone-fill"></i>      Scanne den QR-Code für Kontaktdaten auf dem Telefon</p>
                 <b><p>Fragen? Wünsche? Anregungen?</p></b>
@@ -94,7 +93,7 @@ function Contact() {
         </div>
       </div>
       <div className='d-flex justify-content-center' style={{ width: '100%', height: "600px" }}>
-        <LeafletMap center={[latitude, longitude]} zoom={23} style={{ width: '100%', height: 'auto', margin: "3%" }}>
+        <LeafletMap center={[latitude, longitude]} zoom={23} zIndexOffset={0} style={{ width: '80%', height: 'auto', margin: "3%", zIndex: 1 }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -122,7 +121,7 @@ function Contact() {
 
           <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-          <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
+          <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <a style={{ color: "black" }} href="/privacy">Datenschutz</a> <a style={{ color: "black" }} href="/impresum">Impressum</a></p>
         </div>
 
         <div className="footer-center">
@@ -154,7 +153,6 @@ function Contact() {
         </div>
 
       </footer>
-
     </>
   )
 }

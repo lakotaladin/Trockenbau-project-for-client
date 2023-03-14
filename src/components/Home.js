@@ -16,6 +16,7 @@ import icon7 from '../resources/logo/icon7.png';
 import icon8 from '../resources/logo/icon8.png';
 
 
+
 function Home() {
 
   const [isVisible, setIsVisible] = useState(false);
@@ -25,6 +26,8 @@ function Home() {
       setIsVisible(true);
     }
   };
+
+ 
 
   return (
     <>
@@ -54,8 +57,11 @@ function Home() {
             </div>
             <br />
             <br />
-            <br />
-            <Link to="/contact"><button className='button-contact btn'>Kontakt</button></Link>
+            <div className='div-button d-flex w-100 p-0 m-0 justify-content-center'>
+            <Link to="/contact"><button className='btn btn-border-1'><i className="ri-arrow-right-s-line"></i>Kontakt</button></Link>
+            <a  href="#services"><button className='btn btn-border-1'><i className="ri-arrow-right-s-line"></i>Leistungen</button></a>
+            </div>
+            
           </div>
         </div>
 
@@ -186,7 +192,7 @@ function Home() {
 
             <img style={{ width: "300px", margin: "0", padding: "0" }} title="FR-Trockenbau logo" src={logo} alt="Logo" />
 
-            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <Link style={{ color: "black" }} to="/privacy">Datenschutz</Link> <Link style={{ color: "black" }} to="/impressum">Impressum</Link></p>
+            <p className="footer-company-name">FR Trockenbau © 2017. All rights Reserved  <a style={{ color: "black" }} href="/privacy">Datenschutz</a> <a style={{ color: "black" }} href="/impresum">Impressum</a></p>
           </div>
 
           <div className="footer-center">
