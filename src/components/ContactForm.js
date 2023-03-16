@@ -7,7 +7,6 @@ import { UserOutlined, MailOutlined, MessageOutlined } from "@ant-design/icons";
 const ContactForm = () => {
     const form = useRef(null);
     const [username, setUsername] = useState('')
-    const [lastname, setLastName] = useState('')
     const [email, setEmail] = useState('')
     const [msg, setMsg] = useState('')
 
@@ -21,11 +20,11 @@ const ContactForm = () => {
         // Email config
         emailjs.sendForm('service_6gqem82', 'template_61f4t9j', f, 'y2iRWZrA7KaaXGQyb')
             .then(() => {
-                message.success('Podaci su poslati, sačekajte odgovor administratora');
-                console.log(emailjs);
+                message.success('Die Nachricht wurde erfolgreich gesendet');
+                window.location.href = "/";
             }, (error) => {
-                message.error({ success: false, message: error.message });
-                console.log(error)
+                message.error("Nachricht wurde nicht gesendet", {success: false, message: error.message });
+                
             });
     }
 
@@ -42,13 +41,6 @@ const ContactForm = () => {
                 <Input prefix={<UserOutlined />} value={username} onChange={e => setUsername(e.target.value)} type="text" name="from_name" placeholder='Vorname' required />
             </Form.Item>
             <Form.Item
-                label="Nachname"
-                name="lastNamee"
-                rules={[{ required: true, message: 'Bitte geben Sie Ihren Nachnamen ein' }]}
-            >
-                <Input prefix={<UserOutlined />} value={lastname} onChange={e => setLastName(e.target.value)} type="text" name="from_lastname" placeholder='Nachname' />
-            </Form.Item>
-            <Form.Item
                 label="E-Mail"
                 name="emaill"
                 rules={[
@@ -56,7 +48,7 @@ const ContactForm = () => {
                     { type: 'email', message: 'Bitte geben Sie eine gültige E-Mail-Adresse ein' },
                 ]}
             >
-                <Input prefix={<MailOutlined />} value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" placeholder='example@gmail.com' />
+                <Input prefix={<MailOutlined />} value={email} onChange={e => setEmail(e.target.value)} type="email" name="from_email" placeholder='beispiel@gmail.com' />
             </Form.Item>
             <Form.Item
                 label="Nachricht"
@@ -78,7 +70,7 @@ const ContactForm = () => {
                     className='contact-button w-100 p-2'
                     type="submit"
                     value="Senden"
-                    disabled={username === "" || lastname === "" || email === "" || msg === ""}
+                    disabled={username === "" || email === "" || msg === ""}
                 />
             </Form.Item>
 
