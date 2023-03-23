@@ -43,7 +43,7 @@ function Galery() {
 
         {/* Navigation bar */}
         <header>
-        <a href="/"><img style={{width: "170px"}} title="FR-Trockenbau logo" src={logo} alt="Logo" /></a>
+          <a href="/"><img style={{ width: "170px" }} title="FR-Trockenbau logo" src={logo} alt="Logo" /></a>
           <nav ref={navRef}>
             <Link to="/" >Home</Link>
             <Link to="/galery">Galery</Link>
@@ -245,7 +245,7 @@ function Galery() {
 
             <div>
               <i className="ri-phone-line"></i>
-              <p>+49 (0) 176 644 1511 0</p>
+              <a style={{ color: "black", textDecoration: "underline" }} href="tel:+49 017664415110">+49 (0) 176 644 1511 0</a>
             </div>
 
             <div>
@@ -265,6 +265,7 @@ function Galery() {
           </div>
 
         </footer>
+
       </div>
       <ScrollToTopButton />
     </>

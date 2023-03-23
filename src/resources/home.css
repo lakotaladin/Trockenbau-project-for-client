@@ -41,9 +41,6 @@
         border: 2px solid black;
         background: #ffffff;
         cursor: pointer;
-        transition: ease-out 0.5s;
-        -webkit-transition: ease-out 0.5s;
-        -moz-transition: ease-out 0.5s;
     }
 }
 
@@ -299,6 +296,11 @@
     width: 33.33%;
     float: left;
     padding: 15px;
+}
+
+.services .content .box p {
+    width: auto !important;
+    text-align: start !important;
 }
 
 .services .content .box .inner {

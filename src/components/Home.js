@@ -127,21 +127,21 @@ function Home() {
                     <div className="inner">
                       <div className="icon"><img title="Verblenden der Wände" style={{ width: "60px" }} src={icon4} alt="icon4" /></div>
                       <h3>Verblenden der Wände</h3>
-                      <p>Die deutsche Bauunternehmung FR Trockenbau aus München ist auf das Verblenden der Wände spezialisiert. Dabei wird eine zusätzliche Schicht an der Außenwand eines Gebäudes angebracht, um eine optisch ansprechende und robuste Oberfläche zu erzielen. Die Verblendung aus verschiedenen Materialien wird präzise und professionell durch fachkundige Mitarbeiter angebracht.</p>
+                      <p>Die Firma FR Trockenbau aus München ist auf das Verblenden der Wände spezialisiert. Dabei wird eine zusätzliche Schicht an der Außenwand eines Gebäudes angebracht, um eine optisch ansprechende und robuste Oberfläche zu erzielen. Die Verblendung aus verschiedenen Materialien wird präzise und professionell durch fachkundige Mitarbeiter angebracht.</p>
                     </div>
                   </div>
                   <div className="box">
                     <div className="inner">
                       <div className="icon"><img title="Branscutz" style={{ width: "60px" }} src={icon5} alt="icon5" /></div>
                       <h3>Branscutz</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                      <p>Wir halfen ihnen dabei ihr brandschutz bestens zu organisieren und umzusetzen.</p>
                     </div>
                   </div>
                   <div className="box">
                     <div className="inner">
                       <div className="icon"><img title="Abakus deke" style={{ width: "60px" }} src={icon6} alt="icon6" /></div>
-                      <h3>Abakus deke</h3>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                      <h3>Abakus decken</h3>
+                      <p>Abakus Decken sind unsere Spezialität! Fragen Sie an wir beraten Sie gerne. </p>
                     </div>
                   </div>
                   <div className="box">
@@ -204,7 +204,7 @@ function Home() {
 
             <div>
               <i className="ri-phone-line"></i>
-              <p>+49 (0) 176 644 1511 0</p>
+              <a style={{ color: "black", textDecoration: "underline" }} href="tel:+49 017664415110">+49 (0) 176 644 1511 0</a>
             </div>
 
             <div>
